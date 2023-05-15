@@ -5,8 +5,8 @@ import AllRoutes from './AllRoutes';
 function App() {
   return (
     <div className="App">
-      <Router> 
       <Navbar/>
+      <Router> 
        <AllRoutes/>
       </Router>
     </div>

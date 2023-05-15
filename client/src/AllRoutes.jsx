@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
-import Home from './Pages/Pages/Home/Home'
-import Auth from './Pages/Pages/Auth/Auth'
+import Home from './Pages/Home/Home'
+import Auth from './Pages/Auth/Auth'
 const AllRoutes = () => {
   return (
     <div>

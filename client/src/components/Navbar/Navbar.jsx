@@ -23,7 +23,7 @@ const Navbar =()=>{
            {user === null ?
               <Link to='/Auth' className='navbar-navbarLink'>Log In</Link>:
               <>
-              <Link to='/' style={{textDecoration:"none"}}><Avatar backgroundColor="#009dff" padding="7px 10px" cursor="pointer" borderRadius="50%" color="white" fontSize="14px">N</Avatar></Link>
+              <Link to='/' style={{textDecoration:"none",color:"#fff"}}><Avatar backgroundColor="#009dff" padding="6px 10px" cursor="pointer" borderRadius="50%" color="white" fontSize="14px">N</Avatar></Link>
               <Link to='/' className='navbar-navbarLink'>Logout</Link>
               </>  
            }
