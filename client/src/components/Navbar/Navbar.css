@@ -1,0 +1,16 @@
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    padding:10px;
+
+}
+
+.navbar input{
+    padding:5px;
+}
+.img-class{
+    text-decoration: none;
+}
