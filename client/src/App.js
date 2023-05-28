@@ -5,9 +5,10 @@ import AllRoutes from './AllRoutes';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      
       <Router> 
-       <AllRoutes/>
+        <Navbar/>
+      <AllRoutes/>
       </Router>
     </div>
   );

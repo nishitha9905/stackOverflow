@@ -1,0 +1,55 @@
+.Auth-page{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px auto;
+}
+.login-signup {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width:330px;
+    margin:10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgb(0,0,0/5%);
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+}
+
+.button {
+    margin:10px;
+}
+.button button{
+    background-color: rgb(61, 151, 219);
+    color : white;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    border: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form .input {
+  padding:10px;
+  width:200px;
+  border:1px solid black;
+  border-radius: 2px;
+}
+.checkbox {
+    cursor:pointer;
+}
+.login-signup .form label :nth-child(1) h4 ,
+.login-signup .form label :nth-child(2) h4,
+.login-signup .form label :nth-child(3) div{
+    margin-bottom: 5px;
+}

@@ -1,8 +1,10 @@
 import React from 'react'
-import  LeftSideBar from '../../components/LeftSideBar/LeftSideBar'
-import RightSideBar from '../../components/RightSideBar/RightSideBar'
+import LeftSideBar from '../../components/LeftSideBar/LeftSideBar'
 import MainMenu from '../../components/MainMenu/MainMenu'
-const Home = () => {
+import RightSideBar from '../../components/RightSideBar/RightSideBar'
+import '../../App.css'
+
+const Questions = () => {
   return (
     <div className='home-container1'>
        <LeftSideBar/>
@@ -16,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Questions

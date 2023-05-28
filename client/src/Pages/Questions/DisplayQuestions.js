@@ -1,13 +1,13 @@
 import React from 'react'
-import  LeftSideBar from '../../components/LeftSideBar/LeftSideBar'
+import LeftSideBar from '../../components/LeftSideBar/LeftSideBar'
 import RightSideBar from '../../components/RightSideBar/RightSideBar'
-import MainMenu from '../../components/MainMenu/MainMenu'
-const Home = () => {
+import QuestionDetails from './QuestionDetails'
+const DisplayQuestions = () => {
   return (
     <div className='home-container1'>
        <LeftSideBar/>
-       <div className='home-container2'>
-        <MainMenu/>
+       <div className='home-container3'>
+        <QuestionDetails/>
        </div>
        <div className='home-container3'>
         <RightSideBar/>
@@ -16,4 +16,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default DisplayQuestions

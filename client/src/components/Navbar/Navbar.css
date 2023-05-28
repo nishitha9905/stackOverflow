@@ -3,7 +3,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: aliceblue;
+    background-color: white;
+    border-bottom:3px solid lightgray;
     padding:10px;
 
 }
@@ -13,4 +14,18 @@
 }
 .img-class{
     text-decoration: none;
+    background-color: whitesmoke;
+    padding: 10px 20px 10px 20px;
+    border-radius: 2px;
+}
+.img-class1{
+    text-decoration: none;
+}
+.navbar-navbarLink{
+    text-decoration: none;
+    background-color:rgb(176, 215, 245);
+    border:1.5px solid  #00a1ce;
+    padding:2px 7px 2px 7px;
+    color:black;
+    border-radius: 2px;
 }
