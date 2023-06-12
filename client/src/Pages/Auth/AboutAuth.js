@@ -2,7 +2,7 @@ import React from 'react'
 import './Auth.css'
 const AboutAuth = () => {
   return (
-    <div className='contents'>
+    <div className='contents' >
         <h3>Join the Stack Overflow community</h3>
         <h4>Get unstuck -- ask a question</h4>
         <h4>Unlock new privileges like voting and commenting</h4>
