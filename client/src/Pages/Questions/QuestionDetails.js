@@ -124,8 +124,8 @@ const QuestionDetails = () => {
                         <p>
                             Browse Other Question Tagged
                             {
-                                question.questionTags.map((tag)=>(
-                                    <Link to='/Tags' key={tag} className='ans-tag'>{tag}</Link>
+                                question.questionTags.map((tags)=>(
+                                    <Link to='/Tags' key={tags} className='ans-tag'>{tags}</Link>
                                 ))
                             } or
                             <Link to='/AskQuestion' style={{textDecoration:"none",color:"#009dff"}}>Ask Your Own Question</Link>

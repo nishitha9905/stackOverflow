@@ -4,9 +4,8 @@ import './Navbar.css'
 import logo from '../../assets/logo.png'
 import search from '../../assets/search.png'
 import Avatar from '../Avatar/Avatar';
-
 const Navbar =()=>{
-  var user = 123;
+  var user = null;
   return(
 <>
     <div>

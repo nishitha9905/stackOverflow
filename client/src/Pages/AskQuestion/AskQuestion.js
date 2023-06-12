@@ -24,7 +24,7 @@ const AskQuestion = () => {
                         <input type='text' id='ask-question-tags' placeholder='(e.g.xml typescript word)' />
                     </label>
                 </div>
-                <input type='submit' className='button' value='Review your Question'/>
+                <input type='submit' className='button1' value='Review your Question'/>
             </form>
 
         </div>

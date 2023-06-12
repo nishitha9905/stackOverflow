@@ -38,7 +38,7 @@ const MainMenu = () => {
 ]
 const location = useLocation();
 const navigate = useNavigate();
-const user = 123;
+const user = null;
 const checkAuth = () => {
   if(user===null){
     alert('login or signup to Ask Question')

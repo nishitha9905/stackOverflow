@@ -1,40 +1,52 @@
 import React, { useState } from 'react';
 import './Auth.css';
 import Logo from '../../assets/stackoverflow_logo.jpg';
+import { signup,login } from '../../actions/authActions'
+import { useDispatch } from 'react-redux';
+import {useNavigate} from 'react-router-dom'
+import AboutAuth from './AboutAuth';
 const Auth = () => {
   const [isSignUp,setIsSignUp] = useState(false);
+  const [name,setName] = useState('')
+  const [password,setPassword] = useState('')
+  const [email,setEmail] = useState('')
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const handleLogin = () =>{
     console.log(isSignUp);
     setIsSignUp(!isSignUp);
   }
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    if(!email || !password){
+      alert("Enter Email and password")
+    }
+    if(isSignUp){
+      if(!name){
+      alert("Enter a name to continue")
+      }
+      dispatch(signup({name,email,password},navigate))
+    }else {
+    dispatch(login({email,password},navigate))
+    }
+    console.log({name,email,password})
+  }
   return (
     <>
     <div className='Auth-page'> 
-    <div className='contents'>  {isSignUp &&
-         <>
-        <h3>Join the Stack Overflow community</h3>
-        <h4>Get unstuck -- ask a question</h4>
-        <h4>Unlock new privileges like voting and commenting</h4>
-        <h4>Save your favorite tags, filters, and jobs</h4>
-        <h4>Earn reputation and badges</h4>
-        <p>Collaborate and share knowledge with a private group for </p>
-        <p style={{color:"#007ace"}}>Get Stack Overflow for Teams free for up to 50 users</p>
-       </>
-      }
-      </div>
+    {isSignUp && <AboutAuth/>}
       <div className='login-signup'>
-      
-    <form className='form'>
+    <form className='form' onSubmit={handleSubmit}>
     <img src={Logo} alt="logo" width='170'/>
       {isSignUp &&
       <>
        <label htmlFor='text'>
        <h4 style={{display:"flex",justifyContent:"center",alignContent:"center"}}>Display Name</h4> 
-        <input className='input' type='text' name='text' id='text'/></label>
+        <input className='input' type='text' name='text' id='text' onChange={(e)=>{setName(e.target.value)}}/></label>
        </>
        }
       <label  htmlFor='email'><h4 style={{display:"flex",justifyContent:"center",alignContent:"center"}}>Email Id</h4>
-      <input className='input' type='email' name='email' id='email' />
+      <input className='input' type='email' name='email' id='email' onChange={(e)=>{setEmail(e.target.value)}} />
       </label>
       
       <label htmlFor='password'>
@@ -44,7 +56,7 @@ const Auth = () => {
        <h5 className='password' style={{color:"#007ace",fontSize:"13px",fontWeight:"normal"}}>Forgot Password?</h5>
       }
       </div>
-      <input className='input' type='password' name='password' id='password' />
+      <input className='input' type='password' name='password' id='password' onChange={(e)=>{setPassword(e.target.value)}} />
       </label>
       {isSignUp &&
         <p>
