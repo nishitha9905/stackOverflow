@@ -36,8 +36,8 @@ const Auth = () => {
     <div className='Auth-page'> 
     {isSignUp && <AboutAuth/>}
       <div className='login-signup'>
+      <img src={Logo} alt="logo" width='170'/>
     <form className='form' onSubmit={handleSubmit}>
-    <img src={Logo} alt="logo" width='170'/>
       {isSignUp &&
       <>
        <label htmlFor='text'>
@@ -73,7 +73,7 @@ const Auth = () => {
         </p>
         }
         <div className='button'>
-       <button type="submit">
+       <button type="submit" style={{cursor:"pointer"}}>
         {!isSignUp?
         <>Login</>:
         <>SignUp</>

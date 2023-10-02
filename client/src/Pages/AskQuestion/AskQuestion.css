@@ -4,10 +4,13 @@
 }
 .ask-question-container{
     margin: auto;
-    max-width: 1200px;
+    max-width: 750px;
 }
 .ask-question-container h1{
     padding : 80px 0px 20px 0px;
+}
+.ask-question-title{
+    min-width:"600px"
 }
 .ask-question-container form .ask-form-question{
     padding: 20px;
@@ -29,7 +32,7 @@
 .ask-form-question label textarea{
     padding: 10px;
     font-family:'roboto',sans-serif;
-    width:calc(100%-20px);
+    width:700px;
     resize:vertical;
     border:1px solid #0000003e;
 }

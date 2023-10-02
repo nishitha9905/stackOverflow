@@ -1,44 +1,48 @@
 import React from 'react'
 import './MainMenu.css'
 import {useLocation,useNavigate} from 'react-router-dom';
+import { useSelector} from 'react-redux';
 import QuestionsList from './QuestionsList';
 const MainMenu = () => {
-    var questionList = [
-        {
-        id:1,
-        votes:2,
-        noOfAnswers:0,
-        questionTitle:"What is a Function?",
-        questionBody:"It meant to be",
-        questionTags:['JavaScript','R','Python'],
-        userPosted:'Nishi',
-        askedOn:'Jan 1'
-       },
-       {
-        id:2,
-        votes:2,
-        noOfAnswers:0,
-        questionTitle:"What is a Function?",
-        questionBody:"It meant to be",
-        questionTags:['JavaScript','R','Python'],
-        userPosted:'Nishi',
-        askedOn:'Jan 1'
-       },
-       {
-        id:3,
-        votes:2,
-        noOfAnswers:0,
-        questionTitle:"What is a Function?",
-        questionBody:"It meant to be",
-        questionTags:['JavaScript','R','Python'],
-        userPosted:'Nishi',
-        askedOn:'Jan 1'
-       }
+//     var questionList = [
+//         {
+//         id:1,
+//         votes:2,
+//         noOfAnswers:0,
+//         questionTitle:"What is a Function?",
+//         questionBody:"It meant to be",
+//         questionTags:['JavaScript','R','Python'],
+//         userPosted:'Nishi',
+//         askedOn:'Jan 1'
+//        },
+//        {
+//         id:2,
+//         votes:2,
+//         noOfAnswers:0,
+//         questionTitle:"What is a Function?",
+//         questionBody:"It meant to be",
+//         questionTags:['JavaScript','R','Python'],
+//         userPosted:'Nishi',
+//         askedOn:'Jan 1'
+//        },
+//        {
+//         id:3,
+//         votes:2,
+//         noOfAnswers:0,
+//         questionTitle:"What is a Function?",
+//         questionBody:"It meant to be",
+//         questionTags:['JavaScript','R','Python'],
+//         userPosted:'Nishi',
+//         askedOn:'Jan 1'
+//        }
 
-]
+// ]
 const location = useLocation();
 const navigate = useNavigate();
-const user = null;
+
+const questionList = useSelector(state => state.questionsReducer)
+console.log("questionsList",questionList.data)
+var user = useSelector((state) => (state.currentUserReducer));
 const checkAuth = () => {
   if(user===null){
     alert('login or signup to Ask Question')
@@ -57,15 +61,15 @@ const checkAuth = () => {
             <button onClick={checkAuth} className='ask-btn'>Ask Question</button>
         </div>
       <div>
-        {questionList===null?
+        {questionList.data===null?
         <h1>Loading....</h1>
         :
         <>
-        <p>{questionList.length}Questions</p>
+        <p>{questionList.data.length} Questions</p>
+        <QuestionsList questionList={questionList.data}/>
         </>
         }
       </div>
-      <QuestionsList questionList={questionList}/>
     </div>
   )
 }
